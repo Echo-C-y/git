@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作业6</title>
+		<style>
+			.div1
+			{
+				width: 50px;
+				height: 60px;
+				background: dodgerblue;
+				transition:width 2s;
+				-webkit-transition: width 2s;
+			}
+			.div2
+			{
+				width: 50px;
+				height: 60px;
+				background: coral;
+				transition: width 2s;
+				-webkit-transition: width 2s;
+			}
+			img
+			{
+				width:50px;
+				height: 60px;
+			}
+			.img1
+			{
+				color: white;
+				line-height: 55px;
+				margin-left: 60px;
+				position: absolute;
+			}
+			.img2
+			{
+				display:inline-block;
+			}
+			div:hover
+			{
+				width: 200px;
+			}
+			div:hover.img1
+			{
+				display: inline-block;
+			}
+			div:hover.img2
+			{
+				float: right;
+				line-height: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<span class="img1">访客visitor</span>
+			<span class="img2"><img src="C:\Users\小杨\Desktop\1.png"/></span>
+		</div>
+		<div class="div2">
+			<span class="img1">学生student</span>
+			<span class="img2"><img src="C:\Users\小杨\Desktop\2.png"/></span>
+		</div>
+	</body>
+</html>
