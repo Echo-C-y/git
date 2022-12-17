@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作业11</title>
+		<html>
+		<head>
+		    <script>
+		       function check()
+		       {
+				   var username = document.form1.userName.value;
+				   var password = document.form1.passWord.value;
+				   var password2 = document.form1.passWord2.value;
+				   if(username==""|| password==""||password2=="")
+				    {
+					   alert("任意信息不能为空，请重新填写！");
+					   return false;
+					}
+					else if(username.length>20)
+					{
+						alert("用户名不能超过20个字符，请重新输入！");
+						return false;
+					}
+					else if(password.length<6)
+					{
+		            alert("密码不能小于6个字符，请重新输入！");
+					return false;
+					}
+					else if (password!=password2)
+					{
+						alert("2次密码输入不一致！");
+						return false;
+					}
+					else
+					{
+						return true;
+					}
+				}
+		    </script>
+			<body>
+				<form id=form1 name="form1" method = "post" action = "addUser.do"  onsubmit="return check()">
+					<tr><td>用户注册</td></tr>
+					<table>
+						<tr><td>用户名：</td> <td><input type="text" name="userName" ></td></tr>
+						<tr><td>密码：</td><td><input type="password" name="passWord"></td></tr>
+						<tr><td>确认密码：</td><td><input type="password" name="passWord2"></td></tr>
+						<tr><td><label><div align="center"><input type="submit" value="确定" ></div></label></td>
+						<td><div align="center"><input type="reset" value="重置">
+						<td><div align="center"><a href="/WaterFront/userLogin.jsp">返回登录</td></tr>
+					</table>
+		        </form>
+		    </body>
+		</html>
